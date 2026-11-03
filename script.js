@@ -1,4 +1,10 @@
-let cart = [];
+// Inicializamos el carrito cargando los datos guardados en localStorage (si existen)
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Llamamos a updateCart al cargar la página para reflejar los datos guardados de inmediato
+document.addEventListener("DOMContentLoaded", () => {
+    updateCart();
+});
 
 const cartBadge = document.getElementById("cart-badge");
 const cartItemsContainer = document.getElementById("cart-items-container");
@@ -13,7 +19,8 @@ function addToCart(id, title, price, img) {
     } else {
         cart.push({ id, title, price, img, quantity: 1 });
     }
-    updateCart();
+    saveAndSycCart(); // Guarda en localStorage y actualiza la vista
+    
     const bsOffcanvas = new bootstrap.Offcanvas(
         document.getElementById("cartOffcanvas"),
     );
@@ -28,11 +35,17 @@ function updateQuantity(id, delta) {
             cart = cart.filter((i) => i.id !== id);
         }
     }
-    updateCart();
+    saveAndSycCart();
 }
 
 function removeItem(id) {
     cart = cart.filter((i) => i.id !== id);
+    saveAndSycCart();
+}
+
+// Función auxiliar para guardar en localStorage y actualizar la interfaz
+function saveAndSycCart() {
+    localStorage.setItem("cart", JSON.stringify(cart));
     updateCart();
 }
 
@@ -82,7 +95,8 @@ function updateCart() {
 checkoutBtn.addEventListener("click", () => {
     if (cart.length === 0) return;
     cart = [];
-    updateCart();
+    saveAndSycCart(); // Limpia el carrito y también lo borra del localStorage tras pagar
+    
     const offcanvasEl = document.getElementById("cartOffcanvas");
     const bsOffcanvas = bootstrap.Offcanvas.getInstance(offcanvasEl);
     if (bsOffcanvas) bsOffcanvas.hide();
