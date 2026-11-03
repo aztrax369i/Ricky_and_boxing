@@ -1,0 +1,1201 @@
+<!doctype html>
+<html lang="es" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RICKY & BOXING | Despierta tu Fuerza Interior</title>
+    <!-- Bootstrap 5.3 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="position-relative">
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark bg-opacity-75 backdrop-blur border-bottom border-secondary border-opacity-25">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Ricky_and_boxing\src\logo.jpeg" alt="Logo" width="50" height="40" />
+            </a>
+            <a class="navbar-brand d-flex items-center gap-2 font-oswald text-uppercase fs-3 fw-bold" href="#">
+          RICKY & <span class="text-danger">BOXING</span>
+        </a>
+
+            <div class="d-flex align-items-center gap-2 order-lg-last">
+                <!-- Shopping Cart Trigger Button -->
+                <button class="btn btn-outline-light position-relative rounded-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas" aria-controls="cartOffcanvas" id="cart-toggle-btn">
+            <i class="bi bi-cart3 fs-5"></i>
+            <span
+              id="cart-badge"
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            >
+              0
+            </span>
+          </button>
+                <!-- Mobile Toggler -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto font-oswald text-uppercase fs-6 gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nosotros">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beneficios">Beneficios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tienda">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonios">Reseñas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="inicio" class="hero-section d-flex align-items-center pt-5 pb-5">
+        <div class="container pt-5">
+            <div class="row align-items-center gy-5">
+                <div class="col-lg-7 text-center text-lg-start">
+                    <span class="badge bg-danger bg-opacity-25 text-danger border border-danger rounded-pill px-3 py-2 text-uppercase mb-3 font-oswald tracking-wide">
+              <i class="bi bi-fire me-1"></i> El Gimnasio #1 de Boxeo
+            </span>
+                    <h1 class="display-2 font-oswald text-uppercase fw-bold tracking-tight text-white mb-3">
+                        Equipo de Combate <span class="text-danger">Forjado</span> en la Cuna del Boxeo
+                    </h1>
+                    <p class="lead text-body-secondary mb-4 font-light max-w-xl">
+                        Nacimos en 1980 en Ecatepec, el semillero de campeones de México. Más de cuatro décadas forjando boxeadores y manejando los mejores artículos de Boxeo.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#contacto" class="btn btn-danger btn-lg font-oswald text-uppercase fw-bold px-4 py-3 rounded-3 shadow">
+                ¡Contáctanos!
+                <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="card bg-dark border-secondary shadow-lg rounded-4 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?q=80&w=800&auto=format&fit=crop" class="card-img-top" alt="Entrenamiento de Boxeo" style="height: 350px; object-fit: cover" />
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="bg-danger rounded-circle p-3 text-white">
+                                    <i class="bi bi-trophy-fill fs-3"></i>
+                                </div>
+                                <div>
+                                    <h5 class="card-title font-oswald text-uppercase mb-1">
+                                        Entrenadores Campeones
+                                    </h5>
+                                    <p class="card-text text-body-secondary small mb-0">
+                                        Instrucción profesional garantizada en cada sesión.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SOBRE NOSOTROS ==================== -->
+    <section id="nosotros" class="py-5 bg-dark">
+        <div class="container py-4">
+            <div class="row align-items-center gy-4">
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxzII_p_dBKmQAKo3oBfGVdjjPSedlGulxgX8OV3Y7A&s=10" class="img-fluid rounded-4 border border-secondary shadow" alt="Ring de box" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <span class="text-danger font-oswald text-uppercase fw-bold">Nuestra Filosofía</span
+            >
+            <h2
+              class="display-5 font-oswald text-uppercase fw-bold text-white mb-3"
+            >
+              Más que un club,
+              <span class="text-danger">tu Campo de Entrenamiento</span>
+                    </h2>
+                    <p class="text-body-secondary leading-relaxed mb-4">
+                        En <strong>RICKY & BOXING</strong> combinamos la tradición clásica del boxeo con métodos modernos de acondicionamiento físico. No importa si tu objetivo es competir o simplemente mejorar tu salud física y mental.
+                    </p>
+
+                    <div class="row g-3">
+                        <div class="col-sm-4">
+                            <div class="p-3 bg-body-tertiary rounded-3 border border-secondary text-center">
+                                <h3 class="font-oswald text-danger fw-bold mb-0">10+</h3>
+                                <small class="text-uppercase text-body-secondary font-oswald">Años Experiencia</small
+                  >
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div
+                  class="p-3 bg-body-tertiary rounded-3 border border-secondary text-center"
+                >
+                  <h3 class="font-oswald text-white fw-bold mb-0">500+</h3>
+                  <small class="text-uppercase text-body-secondary font-oswald"
+                    >Alumnos Activos</small
+                  >
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div
+                  class="p-3 bg-body-tertiary rounded-3 border border-secondary text-center"
+                >
+                  <h3 class="font-oswald text-warning fw-bold mb-0">8</h3>
+                  <small class="text-uppercase text-body-secondary font-oswald"
+                    >Coaches Pro</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BENEFICIOS ==================== -->
+    <section
+      id="beneficios"
+      class="py-5 bg-body-tertiary border-top border-bottom border-secondary border-opacity-25"
+    >
+      <div class="container py-4">
+        <div class="text-center max-w-2xl mx-auto mb-5">
+          <span class="text-danger font-oswald text-uppercase fw-bold"
+            >Ventajas Principales</span
+          >
+          <h2 class="display-5 font-oswald text-uppercase fw-bold">
+            Beneficios de <span class="text-danger">Entrenar con Nosotros</span>
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="card h-100 bg-dark text-white border-secondary card-custom p-3 rounded-4"
+            >
+              <div class="card-body">
+                <div class="text-danger fs-1 mb-3">
+                  <i class="bi bi-person-badge-fill"></i>
+                </div>
+                <h4 class="card-title font-oswald text-uppercase">
+                  Coaches Certificados
+                </h4>
+                <p class="card-text text-body-secondary small">
+                  Entrenadores con trayectoria nacional e internacional en boxeo
+                  profesional.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="card h-100 bg-dark text-white border-secondary card-custom p-3 rounded-4"
+            >
+              <div class="card-body">
+                <div class="text-danger fs-1 mb-3">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+                <h4 class="card-title font-oswald text-uppercase">
+                  Equipamiento Pro
+                </h4>
+                <p class="card-text text-body-secondary small">
+                  Instalaciones equipadas con marcas líderes y mantenimiento
+                  continuo.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="card h-100 bg-dark text-white border-secondary card-custom p-3 rounded-4"
+            >
+              <div class="card-body">
+                <div class="text-danger fs-1 mb-3">
+                  <i class="bi bi-fire"></i>
+                </div>
+                <h4 class="card-title font-oswald text-uppercase">
+                  Quema Calórica
+                </h4>
+                <p class="card-text text-body-secondary small">
+                  Quema hasta 800 calorías por sesión acelerando tu metabolismo
+                  significativamente.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="card h-100 bg-dark text-white border-secondary card-custom p-3 rounded-4"
+            >
+              <div class="card-body">
+                <div class="text-danger fs-1 mb-3">
+                  <i class="bi bi-heart-pulse-fill"></i>
+                </div>
+                <h4 class="card-title font-oswald text-uppercase">
+                  Salud Mental
+                </h4>
+                <p class="card-text text-body-secondary small">
+                  Canaliza tensiones, libera endorfinas y fortalece tu
+                  disciplina física y mental.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROGRAMAS ==================== -->
+    <section id="programas" class="py-5 bg-dark">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="text-danger font-oswald text-uppercase fw-bold"
+            >Nuestros Programas</span
+          >
+          <h2 class="display-5 font-oswald text-uppercase fw-bold">
+            Entrenamiento a tu <span class="text-danger">Medida</span>
+          </h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="card h-100 bg-body-tertiary border-secondary overflow-hidden rounded-4 card-custom"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoQaWgjtrzo-_bYnIsqllGj2c0HqkQsY8miqRPHzZMfA&s"
+                class="card-img-top"
+                alt="Boxeo Recreativo"
+                style="height: 180px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h4 class="card-title font-oswald text-uppercase text-white">
+                    Boxeo Recreativo
+                  </h4>
+                  <p class="card-text text-body-secondary small">
+                    Aprende los golpes fundamentales y combinaciones sin riesgo
+                    de combate.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="card h-100 bg-body-tertiary border-secondary overflow-hidden rounded-4 card-custom"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=400&auto=format&fit=crop"
+                class="card-img-top"
+                alt="Fit Boxing HIIT"
+                style="height: 180px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span class="badge bg-danger text-uppercase mb-2 font-oswald"
+                    >Popular</span
+                  >
+                  <h4 class="card-title font-oswald text-uppercase text-white">
+                    Fit Boxing HIIT
+                  </h4>
+                  <p class="card-text text-body-secondary small">
+                    Intenso circuito funcional combinando sacos de box con
+                    ejercicios calisténicos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="card h-100 bg-body-tertiary border-secondary overflow-hidden rounded-4 card-custom"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTucoZ806gQ489n0LckVDPy_FRFRCvcIlGcB9dd2oMpxg&s=10"
+                class="card-img-top"
+                alt="Boxeo Competitivo"
+                style="height: 180px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h4 class="card-title font-oswald text-uppercase text-white">
+                    Boxeo Competitivo
+                  </h4>
+                  <p class="card-text text-body-secondary small">
+                    Sparring técnico supervisado y acondicionamiento estricto
+                    para peleadores.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div
+              class="card h-100 bg-body-tertiary border-secondary overflow-hidden rounded-4 card-custom"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf2yzjTvZ3GH5f96tD2RfUTWHtFpiR0ySTuprGNOQiiw&s=10"
+                class="card-img-top"
+                alt="Entrenamiento VIP"
+                style="height: 180px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <span
+                    class="badge bg-warning text-dark text-uppercase mb-2 font-oswald"
+                    >Personalizado</span
+                  >
+                  <h4 class="card-title font-oswald text-uppercase text-white">
+                    Entrenamiento 1-on-1
+                  </h4>
+                  <p class="card-text text-body-secondary small">
+                    Atención personalizada con un coach exclusivo para acelerar
+                    tus metas.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TIENDA OFICIAL ==================== -->
+    <section
+      id="tienda"
+      class="py-5 bg-body-tertiary border-top border-bottom border-secondary border-opacity-25"
+    >
+      <div class="container py-4">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5"
+        >
+          <div>
+            <span class="text-warning font-oswald text-uppercase fw-bold"
+              ><i class="bi bi-cart-check me-1"></i> Equipamiento Oficial</span
+            >
+            <h2 class="display-5 font-oswald text-uppercase fw-bold text-white">
+              Tienda <span class="text-danger">Ricky & Boxing</span>
+            </h2>
+          </div>
+          <button
+            class="btn btn-outline-warning font-oswald text-uppercase fw-bold mt-3 mt-md-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#cartOffcanvas"
+          >
+            <i class="bi bi-cart3 me-2"></i>Ver Mi Carrito
+          </button>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="row g-4" id="products-grid">
+          <!-- Producto 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 bg-dark text-white border-secondary rounded-4 card-custom"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=500&auto=format&fit=crop"
+                class="card-img-top"
+                alt="Guantes Pro 16oz"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <h5 class="card-title font-oswald text-uppercase mb-0">
+                      Guantes Pro Leather 16oz
+                    </h5>
+                    <span class="badge bg-warning text-dark font-oswald fs-6"
+                      >$1,299 MXN</span
+                    >
+                  </div>
+                  <div class="text-warning small mb-2">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="card-text text-body-secondary small">
+                    Piel de res 100% genuina con soporte reforzado de muñeca.
+                  </p>
+                </div>
+                <button
+                  onclick="
+                    addToCart(
+                      1,
+                      'Guantes Pro Leather 16oz',
+                      1299,
+                      'https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=500&auto=format&fit=crop',
+                    )
+                  "
+                  class="btn btn-danger w-100 font-oswald text-uppercase fw-bold mt-3"
+                >
+                  <i class="bi bi-bag-plus me-2"></i>Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 bg-dark text-white border-secondary rounded-4 card-custom"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwF5b4XFBWt5wCwG8bH-uPKTAubxhB722sfcBfG__8zA&s=10"
+                class="card-img-top"
+                alt="Vendas de Boxeo"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <h5 class="card-title font-oswald text-uppercase mb-0">
+                      Vendas de Boxeo 4.5m
+                    </h5>
+                    <span class="badge bg-warning text-dark font-oswald fs-6"
+                      >$249 MXN</span
+                    >
+                  </div>
+                  <div class="text-warning small mb-2">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="card-text text-body-secondary small">
+                    Algodón semi-elástico para máxima sujeción de nudillos.
+                  </p>
+                </div>
+                <button
+                  onclick="
+                    addToCart(
+                      2,
+                      'Vendas de Boxeo 4.5m',
+                      249,
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwF5b4XFBWt5wCwG8bH-uPKTAubxhB722sfcBfG__8zA&s=10',
+                    )
+                  "
+                  class="btn btn-danger w-100 font-oswald text-uppercase fw-bold mt-3"
+                >
+                  <i class="bi bi-bag-plus me-2"></i>Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 bg-dark text-white border-secondary rounded-4 card-custom"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpE9MWOk1aswfXv7zKBQEay9OLcmDSu3bOktuA6Ynfkg&s=10"
+                class="card-img-top"
+                alt="Costal de Boxeo"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <h5 class="card-title font-oswald text-uppercase mb-0">
+                      Costal Heavy Duty 100lb
+                    </h5>
+                    <span class="badge bg-warning text-dark font-oswald fs-6"
+                      >$2,899 MXN</span
+                    >
+                  </div>
+                  <div class="text-warning small mb-2">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-half"></i>
+                  </div>
+                  <p class="card-text text-body-secondary small">
+                    Construcción ultra resistente con cadenas de suspensión
+                    giratorias.
+                  </p>
+                </div>
+                <button
+                  onclick="
+                    addToCart(
+                      3,
+                      'Costal Heavy Duty 100lb',
+                      2899,
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpE9MWOk1aswfXv7zKBQEay9OLcmDSu3bOktuA6Ynfkg&s=10',
+                    )
+                  "
+                  class="btn btn-danger w-100 font-oswald text-uppercase fw-bold mt-3"
+                >
+                  <i class="bi bi-bag-plus me-2"></i>Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 bg-dark text-white border-secondary rounded-4 card-custom"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzQ8xUDeFknulDcZ0xFHHmUDllWx-A5nsF9fkPzogtoQ&s"
+                class="card-img-top"
+                alt="Protector Bucal"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <h5 class="card-title font-oswald text-uppercase mb-0">
+                      Protector Bucal Gel-Fit
+                    </h5>
+                    <span class="badge bg-warning text-dark font-oswald fs-6"
+                      >$349 MXN</span
+                    >
+                  </div>
+                  <div class="text-warning small mb-2">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="card-text text-body-secondary small">
+                    Moldeable por calor para ajuste perfecto y absorción de
+                    impacto.
+                  </p>
+                </div>
+                <button
+                  onclick="
+                    addToCart(
+                      4,
+                      'Protector Bucal Gel-Fit',
+                      349,
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzQ8xUDeFknulDcZ0xFHHmUDllWx-A5nsF9fkPzogtoQ&s',
+                    )
+                  "
+                  class="btn btn-danger w-100 font-oswald text-uppercase fw-bold mt-3"
+                >
+                  <i class="bi bi-bag-plus me-2"></i>Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 bg-dark text-white border-secondary rounded-4 card-custom"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiTB_Fuo2pg8dVeWtQvqA1BkbzSvYmlr-0olq7KbEpKw&s"
+                class="card-img-top"
+                alt="Camiseta Oficial"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <h5 class="card-title font-oswald text-uppercase mb-0">
+                      Camiseta Oficial Heavyweight
+                    </h5>
+                    <span class="badge bg-warning text-dark font-oswald fs-6"
+                      >$499 MXN</span
+                    >
+                  </div>
+                  <div class="text-warning small mb-2">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="card-text text-body-secondary small">
+                    100% Algodón peinado de alto gramaje con diseño exclusivo.
+                  </p>
+                </div>
+                <button
+                  onclick="
+                    addToCart(
+                      5,
+                      'Camiseta Oficial Heavyweight',
+                      499,
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiTB_Fuo2pg8dVeWtQvqA1BkbzSvYmlr-0olq7KbEpKw&s',
+                    )
+                  "
+                  class="btn btn-danger w-100 font-oswald text-uppercase fw-bold mt-3"
+                >
+                  <i class="bi bi-bag-plus me-2"></i>Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Producto 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div
+              class="card h-100 bg-dark text-white border-secondary rounded-4 card-custom"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEcKg4y4Rt67Jj6UoxiKcFNngpqhbOwcUwtuHnvTxag&s=10"
+                class="card-img-top"
+                alt="Cuerda de Salto"
+                style="height: 220px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <div
+                    class="d-flex justify-content-between align-items-start mb-2"
+                  >
+                    <h5 class="card-title font-oswald text-uppercase mb-0">
+                      Cuerda de Salto Pro Speed
+                    </h5>
+                    <span class="badge bg-warning text-dark font-oswald fs-6"
+                      >$299 MXN</span
+                    >
+                  </div>
+                  <div class="text-warning small mb-2">
+                    <i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i
+                    ><i class="bi bi-star-fill"></i>
+                  </div>
+                  <p class="card-text text-body-secondary small">
+                    Rodamientos de baleros de alta velocidad y guaya de acero
+                    ajustable.
+                  </p>
+                </div>
+                <button
+                  onclick="
+                    addToCart(
+                      6,
+                      'Cuerda de Salto Pro Speed',
+                      299,
+                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOEcKg4y4Rt67Jj6UoxiKcFNngpqhbOwcUwtuHnvTxag&s=10',
+                    )
+                  "
+                  class="btn btn-danger w-100 font-oswald text-uppercase fw-bold mt-3"
+                >
+                  <i class="bi bi-bag-plus me-2"></i>Agregar al Carrito
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIOS (CAROUSEL) ==================== -->
+    <section id="testimonios" class="py-5 bg-dark">
+      <div class="container py-4">
+        <div class="text-center mb-5">
+          <span class="text-danger font-oswald text-uppercase fw-bold"
+            >Historias de Éxito</span
+          >
+          <h2 class="display-5 font-oswald text-uppercase fw-bold">
+            Opiniones de <span class="text-danger">Miembros</span>
+          </h2>
+        </div>
+
+        <div
+          id="testimonialCarousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div
+                    class="card bg-body-tertiary border-secondary text-center p-4 p-md-5 rounded-4 shadow"
+                  >
+                    <div class="text-warning fs-4 mb-3">
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="lead font-light fst-italic text-light mb-4">
+                      "Llegué después de mi primer clase, sin haber tocado un
+                      guante en mi vida. En 9 meses, mis guantes, venda y bucal
+                      siguen acompañándome, excelente calidad ."
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-3"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=120&auto=format&fit=crop"
+                        class="rounded-circle border border-danger border-2"
+                        width="60"
+                        height="60"
+                        alt="Valeria M."
+                      />
+                      <div class="text-start">
+                        <h6 class="font-oswald text-uppercase text-white mb-0">
+                          Valeria Mendoza
+                        </h6>
+                        <small class="text-body-secondary font-oswald"
+                          >Boxeo recreativo</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div
+                    class="card bg-body-tertiary border-secondary text-center p-4 p-md-5 rounded-4 shadow"
+                  >
+                    <div class="text-warning fs-4 mb-3">
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </div>
+                    <p class="lead font-light fst-italic text-light mb-4">
+                      "Equipamiento de primera y los coaches te dan una guía
+                      completa para saber escoger según tus necesidades. El
+                      envío llegó en tiempo y forma, bien protegido"
+                    </p>
+                    <div
+                      class="d-flex justify-content-center align-items-center gap-3"
+                    >
+                      <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=120&auto=format&fit=crop"
+                        class="rounded-circle border border-danger border-2"
+                        width="60"
+                        height="60"
+                        alt="Carlos R."
+                      />
+                      <div class="text-start">
+                        <h6 class="font-oswald text-uppercase text-white mb-0">
+                          Carlos Ramírez
+                        </h6>
+                        <small class="text-body-secondary font-oswald"
+                          >Boxeo Competitivo</small
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION BANNER ==================== -->
+    <section
+      class="cta-banner py-5 my-4 border-top border-bottom border-danger"
+    >
+      <div class="container text-center py-4">
+        <h2
+          class="display-4 font-oswald text-uppercase fw-bold text-white mb-3"
+        >
+          ¿Listo para <span class="text-warning">Inscribirte</span>?
+        </h2>
+        <p class="lead text-light mb-4 font-light max-w-2xl mx-auto">
+          Inscríbete hoy y obtén un <strong>DESCUENTO DEL 15%</strong> más un
+          <strong>Kit de Vendas de Regalo</strong>
+        </p>
+        <a
+          href="#contacto"
+          class="btn btn-light btn-lg font-oswald text-uppercase fw-bold text-dark px-5 py-3 rounded-3 shadow"
+        >
+          <i class="bi bi-gift-fill me-2 text-danger"></i>Reclamar Mi Oferta
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACTO & UBICACIÓN ==================== -->
+    <section id="contacto" class="py-5 bg-dark">
+      <div class="container py-4">
+        <div class="row gy-5">
+          <div class="col-lg-7">
+            <div
+              class="card bg-body-tertiary border-secondary rounded-4 p-4 p-md-5 shadow"
+            >
+              <h3 class="font-oswald text-uppercase text-white mb-2">
+                Hablemos de esquina a esquina.
+              </h3>
+              <p class="text-body-secondary small mb-4">
+                ¿Dudas sobre los programas o productos? Nuestro equipo te
+                asesora
+              </p>
+
+              <form id="contact-form">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label text-uppercase small font-oswald"
+                      >Nombre Completo</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control bg-dark text-white border-secondary"
+                      required
+                      placeholder="Ej. Juan Pérez"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-uppercase small font-oswald"
+                      >Correo Electrónico</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control bg-dark text-white border-secondary"
+                      required
+                      placeholder="correo@ejemplo.com"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-uppercase small font-oswald"
+                      >Teléfono / WhatsApp</label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control bg-dark text-white border-secondary"
+                      required
+                      placeholder="+52 55 1234-5678"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label text-uppercase small font-oswald"
+                      >Asunto</label
+                    >
+                    <select
+                      class="form-select bg-dark text-white border-secondary"
+                    >
+                      <option value="recreativo">Inscripción</option>
+                      <option value="hiit">Dudas</option>
+                      <option value="competitivo">Seguir envío</option>
+                      <option value="personalizado">Cupones disponibles</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label text-uppercase small font-oswald"
+                      >Mensaje (Opcional)</label
+                    >
+                    <textarea
+                      class="form-control bg-dark text-white border-secondary"
+                      rows="3"
+                      placeholder="Comentarios adicionales..."
+                    ></textarea>
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button
+                      type="submit"
+                      class="btn btn-danger w-100 font-oswald text-uppercase fw-bold py-3"
+                    >
+                      <i class="bi bi-send-fill me-2"></i>Enviar Solicitud
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-between">
+            <div>
+              <h3 class="font-oswald text-uppercase text-white mb-4">
+                Ubicación y Horarios
+              </h3>
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <div class="badge bg-danger rounded-3 p-3">
+                  <i class="bi bi-geo-alt-fill fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="font-oswald text-uppercase text-white mb-1">
+                    Dirección
+                  </h6>
+                  <p class="text-body-secondary small mb-0">
+                    Av. de los Campeones #404, Col. Centro, Ecatepec, Estado de
+                    México
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <div class="badge bg-danger rounded-3 p-3">
+                  <i class="bi bi-clock-fill fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="font-oswald text-uppercase text-white mb-1">
+                    Horarios
+                  </h6>
+                  <p class="text-body-secondary small mb-0">
+                    Lun - Vie: 08:00 AM - 10:00 PM<br />Sáb: 08:00 AM - 02:00 PM
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex align-items-start gap-3 mb-4">
+                <div class="badge bg-danger rounded-3 p-3">
+                  <i class="bi bi-telephone-fill fs-4"></i>
+                </div>
+                <div>
+                  <h6 class="font-oswald text-uppercase text-white mb-1">
+                    Teléfonos
+                  </h6>
+                  <p class="text-body-secondary small mb-0">
+                    +52 (55) 1234-5432 / +52 (55) 4321-5678
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="card bg-body-tertiary border-secondary rounded-4 p-3 text-center"
+            >
+              <i class="bi bi-map text-danger display-4 mb-2"></i>
+              <span class="font-oswald text-uppercase text-white"
+                >Ricky and boxing</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-black border-top border-secondary border-opacity-50 py-5">
+      <div class="container">
+        <div class="row g-4 mb-4">
+          <div class="col-lg-4">
+            <a
+              class="navbar-brand d-flex align-items-center gap-2 font-oswald text-uppercase fs-4 fw-bold mb-3"
+              href="#"
+            >
+              <a class="navbar-brand" href="#">
+                <img
+                  src="Ricky_and_boxing\src\logo.jpeg"
+                  alt="Logo"
+                  width="50"
+                  height="40"
+                />
+              </a>
+              RICKY & <span class="text-danger">BOXING</span>
+            </a>
+            <p class="text-body-secondary small font-light mb-3">
+              Ricky and Boxing: Formación de boxeadores y distribución de equipo
+              para deportes de contacto desde 1980. Orgullosamente nacidos en
+              Ecatepec, Estado de México.
+            </p>
+            <div class="d-flex gap-2">
+              <a
+                href="#"
+                class="btn btn-outline-secondary btn-sm rounded-circle"
+                ><i class="bi bi-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="btn btn-outline-secondary btn-sm rounded-circle"
+                ><i class="bi bi-facebook"></i
+              ></a>
+              <a
+                href="#"
+                class="btn btn-outline-secondary btn-sm rounded-circle"
+                ><i class="bi bi-youtube"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-6 col-lg-2 ms-auto">
+            <h6
+              class="font-oswald text-uppercase text-white mb-3 border-start border-danger border-3 ps-2"
+            >
+              Links
+            </h6>
+            <ul class="list-unstyled text-body-secondary small space-y-2">
+              <li>
+                <a href="#inicio" class="text-decoration-none text-reset"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a href="#nosotros" class="text-decoration-none text-reset"
+                  >Nosotros</a
+                >
+              </li>
+              <li>
+                <a href="#beneficios" class="text-decoration-none text-reset"
+                  >Beneficios</a
+                >
+              </li>
+              <li>
+                <a href="#programas" class="text-decoration-none text-reset"
+                  >Programas</a
+                >
+              </li>
+              <li>
+                <a href="#tienda" class="text-decoration-none text-reset"
+                  >Tienda</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div
+              class="font-oswald text-uppercase text-white mb-3 border-start border-danger border-3 ps-2"
+            >
+              Boletín
+            </div>
+            <p class="text-body-secondary small mb-2">
+              Recibe tips de entrenamiento y promociones.
+            </p>
+            <div class="input-group input-group-sm">
+              <input
+                type="email"
+                class="form-control bg-dark text-white border-secondary"
+                placeholder="Tu email"
+              />
+              <button class="btn btn-danger">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-top border-secondary border-opacity-25 pt-4 text-center text-body-secondary small"
+        >
+          &copy; © 2026 Ricky and Boxing. Todos los derechos reservados.
+          Diseñado para peleadores, forjado en México.
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==================== BOOTSTRAP 5.3 OFFCANVAS CARRITO ==================== -->
+    <div
+      class="offcanvas offcanvas-end bg-dark text-white border-start border-secondary"
+      tabindex="-1"
+      id="cartOffcanvas"
+      aria-labelledby="cartOffcanvasLabel"
+    >
+      <div class="offcanvas-header border-bottom border-secondary">
+        <h5
+          class="offcanvas-title font-oswald text-uppercase d-flex align-items-center gap-2"
+          id="cartOffcanvasLabel"
+        >
+          <i class="bi bi-bag-shopping text-danger"></i> Tu Carrito de Compras
+        </h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column justify-content-between">
+        <div id="cart-items-container" class="space-y-3">
+          <p class="text-center text-body-secondary my-5 font-light">
+            Tu carrito está vacío.<br />¡Agrega tu equipamiento!
+          </p>
+        </div>
+
+        <div class="border-top border-secondary pt-3 mt-3">
+          <div class="d-flex justify-content-between mb-2">
+            <span class="text-body-secondary">Subtotal:</span>
+            <span id="cart-subtotal" class="fw-bold">$0.00 MXN</span>
+          </div>
+          <div class="d-flex justify-content-between mb-3 fs-5 font-oswald">
+            <span class="text-white">Total:</span>
+            <span id="cart-total" class="text-warning fw-bold">$0.00 MXN</span>
+          </div>
+          <button
+            id="checkout-btn"
+            class="btn btn-danger w-100 font-oswald text-uppercase fw-bold py-3"
+          >
+            <i class="bi bi-credit-card-fill me-2"></i>Proceder al Pago
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== BOOTSTRAP MODAL (CHECKOUT) ==================== -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div
+          class="modal-content bg-dark text-white border-secondary rounded-4"
+        >
+          <div class="modal-body text-center p-5">
+            <div class="text-success display-1 mb-3">
+              <i class="bi bi-check-circle-fill"></i>
+            </div>
+            <h3 class="font-oswald text-uppercase">¡Pedido Confirmado!</h3>
+            <p class="text-body-secondary small mb-4">
+              Gracias por comprar en <strong>Ricky and boxing</strong>.Te hemos
+              enviado el resumen y guía de envío a tu correo.
+            </p>
+            <button
+              type="button"
+              class="btn btn-danger font-oswald text-uppercase px-4"
+              data-bs-dismiss="modal"
+            >
+              Aceptar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5.3 JS Bundle CDN -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
