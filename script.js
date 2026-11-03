@@ -92,10 +92,53 @@ checkoutBtn.addEventListener("click", () => {
     bsModal.show();
 });
 
+
+// Conectar el formulario con el backend
 document
     .getElementById("contact-form")
-    .addEventListener("submit", function(e) {
+    .addEventListener("submit", async function(e) {
         e.preventDefault();
-        alert("¡Gracias! Tu solicitud para la clase gratis ha sido recibida.");
-        this.reset();
+
+        // Obtener los campos del formulario
+        const nombre = this.querySelector('input[type="text"]').value.trim();
+        const correo = this.querySelector('input[type="email"]').value.trim();
+        const telefono = this.querySelector('input[type="tel"]').value.trim();
+        const asunto = this.querySelector("select").value;
+        const mensaje = this.querySelector("textarea").value.trim();
+
+        // Preparar los datos para enviarlos al backend
+        const datosContacto = {
+            nombre,
+            correo,
+            telefono,
+            asunto,
+            mensaje
+        };
+
+        try {
+            const respuesta = await fetch("http://localhost:3000/api/contacto", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(datosContacto)
+            });
+
+            const resultado = await respuesta.json();
+
+            if (!respuesta.ok) {
+                alert(resultado.errores
+                    ? resultado.errores.join("\n")
+                    : resultado.mensaje
+                );
+                return;
+            }
+
+            alert("¡Gracias! Tu solicitud fue recibida correctamente.");
+            this.reset();
+
+        } catch (error) {
+            console.error("Error al enviar el formulario:", error);
+            alert("No fue posible enviar tu solicitud. Verifica que el servidor esté funcionando.");
+        }
     });

@@ -1,7 +1,7 @@
 // Importar el módulo HTTP de Node.js
 const http = require("node:http");
 
-// Importar las funciones de contactos
+// Importar las funciones del formulario
 const {
     validarContacto,
     guardarContacto
@@ -25,24 +25,25 @@ function responder(res, estado, datos) {
 // Crear servidor
 const servidor = http.createServer((req, res) => {
 
-    // Permitir solicitudes desde el frontend durante desarrollo
+    // Permitir solicitudes del frontend
     if (req.method === "OPTIONS") {
         res.writeHead(204, {
             "Access-Control-Allow-Origin": "*",
             "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
             "Access-Control-Allow-Headers": "Content-Type"
         });
+
         return res.end();
     }
 
-    // Comprobar que el servidor funciona
+    // Comprobar que el backend funciona
     if (req.method === "GET" && req.url === "/api/health") {
         return responder(res, 200, {
             mensaje: "Backend de Ricky and Boxing funcionando."
         });
     }
 
-    // Recibir solicitudes del formulario
+    // Recibir los datos del formulario
     if (req.method === "POST" && req.url === "/api/contacto") {
 
         let cuerpo = "";
@@ -64,9 +65,9 @@ const servidor = http.createServer((req, res) => {
             try {
                 const datos = JSON.parse(cuerpo);
 
+                // Validar los datos recibidos
                 const resultado = validarContacto(datos);
 
-                // Si existen errores, responder con ellos
                 if (!resultado.valido) {
                     return responder(res, 400, {
                         exitoso: false,
@@ -74,7 +75,7 @@ const servidor = http.createServer((req, res) => {
                     });
                 }
 
-                // Guardar solicitud
+                // Guardar el contacto
                 const contactoGuardado = guardarContacto(resultado.datos);
 
                 return responder(res, 201, {

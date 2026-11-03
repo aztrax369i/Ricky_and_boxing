@@ -1,24 +1,25 @@
-
 // Lista temporal de contactos recibidos
 const contactos = [];
-
-// Disciplinas permitidas
-const disciplinasPermitidas = ["Boxeo", "MMA", "Fitness"];
 
 // Validar los datos del formulario
 function validarContacto(datos) {
     const errores = [];
 
+    // Obtener y limpiar los datos
     const nombre = typeof datos.nombre === "string"
         ? datos.nombre.trim()
         : "";
 
-    const contacto = typeof datos.contacto === "string"
-        ? datos.contacto.trim()
+    const correo = typeof datos.correo === "string"
+        ? datos.correo.trim()
         : "";
 
-    const disciplina = typeof datos.disciplina === "string"
-        ? datos.disciplina.trim()
+    const telefono = typeof datos.telefono === "string"
+        ? datos.telefono.trim()
+        : "";
+
+    const asunto = typeof datos.asunto === "string"
+        ? datos.asunto.trim()
         : "";
 
     const mensaje = typeof datos.mensaje === "string"
@@ -30,19 +31,30 @@ function validarContacto(datos) {
         errores.push("El nombre debe tener al menos 2 caracteres.");
     }
 
-    // Validar correo o teléfono
-    const esCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(contacto);
+    // Validar correo electrónico
+    const correoValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo);
 
-    const telefonoLimpio = contacto.replace(/[\s()+-]/g, "");
-    const esTelefono = /^\d{10,15}$/.test(telefonoLimpio);
-
-    if (!esCorreo && !esTelefono) {
-        errores.push("Ingresa un correo electrónico o teléfono válido.");
+    if (!correoValido) {
+        errores.push("Ingresa un correo electrónico válido.");
     }
 
-    // Validar disciplina
-    if (!disciplinasPermitidas.includes(disciplina)) {
-        errores.push("Selecciona Boxeo, MMA o Fitness.");
+    // Validar teléfono
+    const telefonoLimpio = telefono.replace(/[\s()+-]/g, "");
+
+    if (!/^\d{10,15}$/.test(telefonoLimpio)) {
+        errores.push("Ingresa un teléfono válido de 10 a 15 dígitos.");
+    }
+
+    // Validar asunto
+    const asuntosPermitidos = [
+        "recreativo",
+        "hiit",
+        "competitivo",
+        "personalizado"
+    ];
+
+    if (!asuntosPermitidos.includes(asunto)) {
+        errores.push("Selecciona un asunto válido.");
     }
 
     // Validar mensaje
@@ -55,8 +67,9 @@ function validarContacto(datos) {
         errores,
         datos: {
             nombre,
-            contacto,
-            disciplina,
+            correo,
+            telefono,
+            asunto,
             mensaje
         }
     };
