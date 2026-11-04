@@ -17,9 +17,11 @@ Landing page moderna y optimizada para un gimnasio de boxeo, diseñada para capt
 6. Contacto y Autor
 
 📌 **Sobre el Proyecto**
+
 Este proyecto consiste en el desarrollo de una Landing page para un gimnasio de boxeo. El sitio web está estructurado estratégicamente para informar a los usuarios sobre las rutinas de entrenamiento especializadas y, al mismo tiempo, exhibir y vender artículos esenciales para la práctica del box (guantes, vendas, protectores, etc.).
 
 🧱 **Estructura de la Landing Page**
+
 El sitio web está dividido en las siguientes secciones clave para guiar al usuario a lo largo de toda su experiencia:
 
 **Header (Encabezado):** Contiene el logotipo institucional, el nombre del proyecto y un menú de navegación responsive (Inicio, Nosotros, Beneficios, Productos, Reseñas, Contacto).
